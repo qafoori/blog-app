@@ -1,0 +1,10 @@
+{
+  // If not specified searches for 'rubocop' executable available on PATH (default and recommended)
+  "ruby.rubocop.executePath": "",
+
+  // default true
+  "ruby.rubocop.onSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.enableDebugLogs": true,
+  "rufo.useBundler": true
+}

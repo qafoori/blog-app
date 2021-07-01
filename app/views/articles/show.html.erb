@@ -2,3 +2,12 @@
 
 <p><strong>Title: </strong><%= @article.title %></p>
 <p><strong>Description: </strong><%= @article.description %></p>
+
+<p>
+  You can
+  <%= link_to "Edit this Article", edit_article_path(@article) %>
+  or
+  <%= link_to "Remove it", article_path(@article), method: :delete, data: { confirm: "Are you really ok with destroying \"#{@article.title}\"" } %>
+  or
+  <%= link_to "Back to Articles", articles_path %>
+</p>

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a87ce9d3-4c2f-426c-b039-ee99b82f3c34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/learning-rails.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning-rails.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +36,9 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2580645" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Rails.Development: learning-rails">
+  <component name="RunManager">
     <configuration name="Development: learning-rails" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="learning-rails" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -149,7 +143,8 @@
       <workItem from="1625054280873" duration="197000" />
       <workItem from="1625054558206" duration="5035000" />
       <workItem from="1625209320851" duration="7179000" />
-      <workItem from="1625217092546" duration="8677000" />
+      <workItem from="1625217092546" duration="9448000" />
+      <workItem from="1625238917917" duration="31000" />
     </task>
     <servers />
   </component>

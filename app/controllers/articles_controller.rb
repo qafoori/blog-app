@@ -1,10 +1,11 @@
+# articles handler
 class ArticlesController < ApplicationController
 
-  before_action :finde_article, only: [:show, :edit, :update, :destroy]
+  before_action :find_article, only: %i[show edit update destroy]
 
 
   def show
-    #finde_article
+    # find_article
   end
 
   def index
@@ -16,41 +17,39 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    #finde_article
+    # find_article
   end
 
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:notic] = "article was successfully created"
+      flash[:notice] = 'article was successfully created'
       redirect_to @article
     else
-      render "new"
+      render 'new'
     end
   end
 
   def update
-    #finde_article
+    # find_article
     if @article.update(article_params)
-      flash[:notic] = "Article was successfully updated"
+      flash[:notice] = 'Article was successfully updated'
       redirect_to @article
     else
-      render "edit"
+      render 'edit'
     end
   end
 
-
-
   def destroy
     @article.destroy
-    flash[:notic] = "Article #{params[:id]} was successfully destroyed"
+    flash[:notice] = "Article #{params[:id]} was successfully destroyed"
     redirect_to articles_path
   end
 
 
   private
 
-  def finde_article
+  def find_article
     @article = Article.find(params[:id])
   end
 

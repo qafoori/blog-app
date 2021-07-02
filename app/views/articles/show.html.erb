@@ -5,7 +5,7 @@
 
 <p>
   By
-  <%= @article.user.username if @article.user %> <!-- if is temp -->
+  <%= link_to @article.user.username, @article.user  %>
 </p>
 
 <p>

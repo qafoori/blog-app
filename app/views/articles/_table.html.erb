@@ -1,0 +1,42 @@
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Author</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% index = 0 %>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= index += 1 %></td>
+      <td><%= article.id %></td>
+      <td><%= article.title %></td>
+      <td><%= article.description %></td>
+      <td><%= article.user.username if article.user %></td> <!-- if is temp -->
+      <td>
+        <%= link_to "Destroy",
+                    article_path(article),
+                    method: :delete,
+                    data: {
+                      confirm: "Are you really ok with destroying \"#{article.title}\""
+                    },
+                    class: 'btn btn-danger' %>
+        <%= link_to "Visit",
+                    article_path(article),
+                    class: 'btn btn-primary' %>
+        <%= link_to "Edit",
+                    edit_article_path(article),
+                    class: 'btn btn-warning' %>
+      </td>
+    </tr>
+  <% end %>
+
+
+
+  </tbody>
+</table>

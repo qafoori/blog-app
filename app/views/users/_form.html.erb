@@ -1,4 +1,4 @@
-<% if @user.errors.any?  %>
+<% if @user.errors.any? %>
   <% @user.errors.full_messages.each do |msg| %>
     <%= msg %><br/>
   <% end %>
@@ -8,20 +8,20 @@
 <%= form_with(model: @user, local: true) do |f| %>
   <p>
     <%= f.label :username %>
-    <br />
+    <br/>
     <%= f.text_field :username %>
   </p>
   <p>
     <%= f.label :email %>
-    <br />
+    <br/>
     <%= f.text_field :email %>
   </p>
   <p>
     <%= f.label :password %>
-    <br />
+    <br/>
     <%= f.text_field :password %>
   </p>
   <p>
-    <%= f.submit "signup", class: 'btn btn-success' %>
+    <%= f.submit(@user.new_record? ? "signup" : "Save the changes", class: 'btn btn-success') %>
   </p>
 <% end %>

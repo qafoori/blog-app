@@ -7,6 +7,7 @@ ruby '2.6.7'
 gem 'rails', '~> 6.1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
+gem 'will_paginate', '~> 3.1.0'
 
 gem 'prettier'
 # Use SCSS for stylesheets

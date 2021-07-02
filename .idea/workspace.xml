@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a87ce9d3-4c2f-426c-b039-ee99b82f3c34" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/learning-rails.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/learning-rails.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
@@ -14,6 +13,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1ufLCBGJ3UdxAEpIBTR6V8Zhnct" />
   <component name="ProjectViewState">
@@ -133,7 +140,7 @@
       <workItem from="1625052141349" duration="79000" />
       <workItem from="1625054280873" duration="197000" />
       <workItem from="1625054558206" duration="5035000" />
-      <workItem from="1625209320851" duration="4419000" />
+      <workItem from="1625209320851" duration="5966000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  root "pages#home"
-  get "about", to: "pages#about"
-  get "faq", to: "pages#faq"
-  # resources :articles, only: [:show, :index, :new, :create, :edit, :update, :destroy]
+  root 'pages#home'
+  get 'about', to: 'pages#about'
+  get 'faq', to: 'pages#faq'
+  # resources :articles, only: %i[show index new create edit update destroy]
   resources :articles
+  get 'signup', to: 'users#new'
+  post 'users', to: 'users#create'
+  resources :users, except: %i[new]
 end

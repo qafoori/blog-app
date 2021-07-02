@@ -41,6 +41,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    byebug
     @article.destroy
     flash[:notice] = "Article #{params[:id]} was successfully destroyed"
     redirect_to articles_path

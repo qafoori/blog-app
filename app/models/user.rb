@@ -25,4 +25,5 @@ class User < ApplicationRecord
             format: {
               with: VALID_EMAIL
             }
+  has_secure_password
 end

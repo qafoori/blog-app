@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a87ce9d3-4c2f-426c-b039-ee99b82f3c34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +39,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2580645" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Rails.Development: learning-rails">
     <configuration name="Development: learning-rails" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="learning-rails" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />

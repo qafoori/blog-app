@@ -1,12 +1,13 @@
 <h1>Articles listing page</h1>
 
-<table class="table">
+<table class="table table-bordered table-hover">
   <thead>
   <tr>
     <th>#</th>
     <th>id</th>
     <th>Title</th>
     <th>Description</th>
+    <th>Author</th>
     <th>Actions</th>
   </tr>
   </thead>
@@ -18,6 +19,7 @@
       <td><%= article.id %></td>
       <td><%= article.title %></td>
       <td><%= article.description %></td>
+      <td><%= article.user.username if article.user %></td> <!-- if is temp -->
       <td>
         <%= link_to "Destroy", article_path(article), method: :delete, data: { confirm: "Are you really ok with destroying \"#{article.title}\"" } %>
         |

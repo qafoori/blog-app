@@ -4,6 +4,11 @@
 <p><strong>Description: </strong><%= @article.description %></p>
 
 <p>
+  By
+  <%= @article.user.username if @article.user %> <!-- if is temp -->
+</p>
+
+<p>
   You can
   <%= link_to "Edit this Article", edit_article_path(@article) %>
   or

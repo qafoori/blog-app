@@ -19,23 +19,24 @@
       <td><%= article.description %></td>
       <td><%= article.user.username if article.user %></td> <!-- if is temp -->
       <td>
-        <%= link_to "Destroy",
-                    article_path(article),
-                    method: :delete,
-                    data: {
-                      confirm: "Are you really ok with destroying \"#{article.title}\""
-                    },
-                    class: 'btn btn-danger' %>
         <%= link_to "Visit",
                     article_path(article),
                     class: 'btn btn-primary' %>
-        <%= link_to "Edit",
-                    edit_article_path(article),
-                    class: 'btn btn-warning' %>
+        <% if logged_in? && (article.user.id === current_user.id || current_user.admin?) %>
+          <%= link_to "Destroy",
+                      article_path(article),
+                      method: :delete,
+                      data: {
+                        confirm: "Are you really ok with destroying \"#{article.title}\""
+                      },
+                      class: 'btn btn-danger' %>
+          <%= link_to "Edit",
+                      edit_article_path(article),
+                      class: 'btn btn-warning' %>
+        <% end %>
       </td>
     </tr>
   <% end %>
-
 
 
   </tbody>

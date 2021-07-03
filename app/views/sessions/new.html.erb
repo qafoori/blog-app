@@ -1,0 +1,18 @@
+<h1>Login</h1>
+
+
+<%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+  <p>
+    <%= f.label :email %>
+    <br/>
+    <%= f.text_field :email, placeholder: 'Enter your email' %>
+  </p>
+  <p>
+    <%= f.label :password %>
+    <br/>
+    <%= f.text_field :password, placeholder: 'Enter your password' %>
+  </p>
+  <p>
+    <%= f.submit("log in ->", class: 'btn btn-success') %>
+  </p>
+<% end %>

@@ -24,7 +24,21 @@
       <td><%= time_ago_in_words(user.created_at) + " ago" %></td>
       <td>
         <%= link_to "Visit", user_path(user), class: 'btn btn-success' %>
-        <%= link_to "Edit", edit_user_path(user), class: 'btn btn-warning' %>
+        <% if logged_in? %>
+          <% if current_user === user || current_user.admin? %>
+            <%= link_to "Edit", edit_user_path(user), class: 'btn btn-warning' %>
+          <% end %>
+          <% if current_user.admin? %>
+            <%= link_to "Destroy this user",
+                        user_path(user),
+                        class: 'btn btn-danger',
+                        method: :delete,
+                        data: {
+                          confirm: 'Are you ok with dismissing this user?'
+                        }
+            %>
+          <% end %>
+        <% end %>
       </td>
     </tr>
   <% end %>

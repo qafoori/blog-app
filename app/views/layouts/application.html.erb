@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>LearningRails</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>LearningRails</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
-    <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
-  </head>
+  <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
+  <%= javascript_pack_tag "application", 'data-turbolinks-track': "reload" %>
+</head>
 
-  <body style="padding: 55px 30px">
-    <%= render 'layouts/flash_messages' %>
-    <%= yield %>
+<body style="padding: 55px 30px">
+<%= render 'layouts/flash_messages' %>
+<%= yield %>
 
-    
 
-    <br />
-    <br />
-    <br />
-    <hr />
-    Redirect menu:
-    <ul>
-      <li><%= link_to "Home page", root_path %></li>
-      <li><%= link_to "Articles list", articles_path %></li>
-      <li><%= link_to "About us", about_path %></li>
-      <li><%= link_to "FAQ", faq_path %></li>
-      <li><%= link_to "Signup", signup_path %></li>
-    </ul>
-  </body>
+
+<br/>
+<br/>
+<br/>
+<hr/>
+Redirect menu:
+<ul>
+  <li><%= link_to "Home page", root_path %></li>
+  <li><%= link_to "Articles list", articles_path %></li>
+  <li><%= link_to "About us", about_path %></li>
+  <li><%= link_to "FAQ", faq_path %></li>
+  <% if logged_in? %>
+    <li><%= link_to "Logout", logout_path, method: :delete %>
+      (as <strong><%= current_user.username %></strong>)
+      <%= '(Is admin)' if (current_user.admin?) %>
+    </li>
+    <li><%= link_to "make a new article", new_article_path %></li>
+  <% else %>
+    <li><%= link_to "Signup", signup_path %></li>
+    <li><%= link_to "Login", login_path %></li>
+  <% end %>
+  <li><%= link_to "Users list", users_path %></li>
+</ul>
+</body>
 </html>

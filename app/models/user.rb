@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :articles
+  has_many :articles, dependent: :destroy
   VALID_EMAIL = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i.freeze
   before_save do
     self.email = email.downcase
@@ -9,7 +9,7 @@ class User < ApplicationRecord
             presence: true,
             length: {
               minimum: 3,
-              maximum: 5
+              maximum: 50
             },
             uniqueness: {
               case_sensitive: false

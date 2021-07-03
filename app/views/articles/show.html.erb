@@ -5,14 +5,20 @@
 
 <p>
   By
-  <%= link_to @article.user.username, @article.user  %>
+  <%= link_to @article.user.username, @article.user %>
 </p>
 
 <p>
   You can
-  <%= link_to "Edit this Article", edit_article_path(@article) %>
-  or
-  <%= link_to "Remove it", article_path(@article), method: :delete, data: { confirm: "Are you really ok with destroying \"#{@article.title}\"" } %>
-  or
+  <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
+    <%= link_to "Edit this Article", edit_article_path(@article), class: 'btn btn-warning' %>
+    or
+    <%= link_to "Remove it", article_path(@article),
+                method: :delete,
+                data: { confirm: "Are you really ok with destroying \"#{@article.title}\"" },
+                class: 'btn btn-danger'
+    %>
+    or
+  <% end %>
   <%= link_to "Back to Articles", articles_path %>
 </p>

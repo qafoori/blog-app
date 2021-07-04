@@ -1,0 +1,12 @@
+<h1>Articles listing page</h1>
+
+<%= render 'table' %>
+
+<div class="flickr_pagination">
+  <div class="page_info">
+    <%= page_entries_info @categories %>
+  </div>
+  <%= will_paginate @categories, :container => false %>
+</div>
+
+<a class='btn btn-success' href='/categories/new'>Create new Category</a>

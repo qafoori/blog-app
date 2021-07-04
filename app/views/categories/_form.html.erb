@@ -1,0 +1,19 @@
+<% if @category.errors.any?  %>
+  repair following errors:
+  <% @category.errors.full_messages.each do |msg| %>
+    <p class='for_test'><%= msg %></p><br/>
+  <% end %>
+<% end %>
+
+
+<%= form_with(model: @category, local: true) do |f| %>
+  <p>
+    <%= f.label :name %>
+    <br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

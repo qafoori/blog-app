@@ -1,0 +1,39 @@
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>id</th>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% index = 0 %>
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= index += 1 %></td>
+      <td><%= category.id %></td>
+      <td><%= category.name %></td>
+      <td>
+        <%= link_to "Visit",
+                    category_path(category),
+                    class: 'btn btn-primary' %>
+        <% if logged_in? &&  current_user.admin? %>
+          <%= link_to "Destroy",
+                      category_path(category),
+                      method: :delete,
+                      data: {
+                        confirm: "Are you really ok with destroying \"#{category.name}\""
+                      },
+                      class: 'btn btn-danger' %>
+          <%= link_to "Edit",
+                      edit_category_path(category),
+                      class: 'btn btn-warning' %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+
+
+  </tbody>
+</table>

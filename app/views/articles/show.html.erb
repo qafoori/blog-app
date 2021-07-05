@@ -8,6 +8,14 @@
   <%= link_to @article.user.username, @article.user %>
 </p>
 
+<% if @article.categories.any? %>
+<p>
+  Categories:
+  <%= render @article.categories %>
+</p>
+<% end %>
+
+
 <p>
   You can
   <% if logged_in? && (@article.user == current_user || current_user.admin?) %>

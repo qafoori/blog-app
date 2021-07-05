@@ -1,4 +1,4 @@
-<% if @article.errors.any?  %> 
+<% if @article.errors.any? %>
   <% @article.errors.full_messages.each do |msg| %>
     <%= msg %><br/>
   <% end %>
@@ -8,13 +8,28 @@
 <%= form_with(model: @article, local: true) do |f| %>
   <p>
     <%= f.label :title %>
-    <br />
+    <br/>
     <%= f.text_field :title %>
   </p>
   <p>
     <%= f.label :description %>
-    <br />
+    <br/>
     <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <br/>
+    <%= f.collection_select(
+          :category_ids,
+          Category.all,
+          :id,
+          :name,
+          { prompt: 'Make your selection from the list below (can be empty)' },
+          {
+            multiple: true,
+            class: 'custom-select rounded'
+          }
+        ) %>
   </p>
   <p>
     <%= f.submit %>

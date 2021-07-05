@@ -1,1 +1,15 @@
 Category: <%= @category.name %>
+
+
+<% if logged_in? && current_user.admin? %>
+  <%= link_to "Edit", edit_category_path(@category), class: 'btn btn-warning' %>
+<% end %>
+
+<%= render 'articles/table' %>
+
+<div class="flickr_pagination">
+  <div class="page_info">
+    <%= page_entries_info @articles %>
+  </div>
+  <%= will_paginate @articles, :container => false %>
+</div>

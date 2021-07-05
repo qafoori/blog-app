@@ -1,0 +1,7 @@
+<span>
+  <%=
+    link_to "##{category.name.downcase.gsub(' ', '_')}",
+            category_path(category),
+            class: 'badge badge-pill badge-secondary'
+  %>
+</span>
